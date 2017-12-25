@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+repositories {
+	mavenLocal()
+	jcenter()
+}
+
+dependencies {
+}
+
+eclipse {
+	classpath {
+		downloadSources = true
+		downloadJavadoc = true
+	}
+}
+
+compileJava {
+	options.encoding = 'UTF-8'
+}
