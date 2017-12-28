@@ -1,7 +1,7 @@
 # assert - Attempt at multi-threaded unit test assertions
 
-This small library provides a simplistic adaptation of TestNG's `Assert` functionality for
-cases where asynchronous execution may be expected as part of unit test.
+This small library provides a simplistic adaptation of TestNG's `Assert` functionality for cases where asynchronous execution may be expected as part
+of unit test.
 
 A basic example will look the following:
 
@@ -23,7 +23,8 @@ public class ExampleTest {
 
     ForkJoinPool.commonPool().execute(() -> {
       Assert.assertEquals(5, 5);
-      Assert.done(); // notify the test runner that one task was completed successfully
+      Assert.done(); // notify the test runner that one subtask was
+                     // completed successfully
     });
 
     Tester.endAsync(1); // wait for 1 async task to complete

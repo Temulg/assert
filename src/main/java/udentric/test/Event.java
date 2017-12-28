@@ -57,6 +57,11 @@ class Event {
 
 		int pos = 0;
 		if (stack[pos].getClassName().equals(
+			Thread.class.getCanonicalName()
+		))
+			pos++;
+
+		while (stack[pos].getClassName().equals(
 			Event.class.getCanonicalName()
 		))
 			pos++;
