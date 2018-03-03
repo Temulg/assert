@@ -3,21 +3,17 @@ plugins {
 	id 'eclipse'
 }
 
-repositories {
-	mavenLocal()
-	jcenter()
-}
-
-dependencies {
-}
-
-eclipse {
-	classpath {
-		downloadSources = true
-		downloadJavadoc = true
-	}
-}
+group 'udentric'
+version '1.0'
 
 compileJava {
 	options.encoding = 'UTF-8'
+}
+
+task sourceJar(type: Jar) {
+	from sourceSets.main.allJava
+}
+
+task docJar(type: Jar, dependsOn: javadoc) {
+	from javadoc.destinationDir
 }

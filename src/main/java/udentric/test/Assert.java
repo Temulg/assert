@@ -1223,6 +1223,9 @@ public class Assert {
 
 	/**
 	 * Asserts that two sets are equal.
+	 *
+	 * @param actual the actual value
+	 * @param expected the expected value
 	 */
 	public static void assertEquals(Set<?> actual, Set<?> expected) {
 		assertEquals(actual, expected, null);
@@ -1230,6 +1233,10 @@ public class Assert {
 
 	/**
 	 * Assert set equals
+	 *
+	 * @param actual the actual value
+	 * @param expected the expected value
+	 * @param message the assertion error message
 	 */
 	public static void assertEquals(
 		Set<?> actual, Set<?> expected, String message
@@ -1306,6 +1313,10 @@ public class Assert {
 
 	/**
 	 * Asserts that two maps are equal.
+	 *
+	 * @param actual the actual value
+	 * @param expected the expected value
+	 * @param message the assertion error message
 	 */
 	public static void assertEquals(
 		Map<?, ?> actual, Map<?, ?> expected, String message
@@ -1607,7 +1618,7 @@ public class Assert {
 	 * Java 8. It allows method references to both void and non-void
 	 * methods to be passed directly into expectThrows without wrapping,
 	 * even if they declare checked exceptions.
-	 * <p/>
+	 *
 	 * This interface is not meant to be implemented directly.
 	 */
 	public interface ThrowingRunnable {
@@ -1634,6 +1645,7 @@ public class Assert {
 	 * describing the mismatch; the exception that was actually thrown can
 	 * be obtained by calling {@link AssertionError#getCause}.
 	 *
+	 * @param <T>            generic type of the expected exception
 	 * @param throwableClass the expected type of the exception
 	 * @param runnable       A function that is expected to throw an
 	 *                       exception when invoked
@@ -1654,6 +1666,7 @@ public class Assert {
 	 * mismatch; the exception that was actually thrown can be obtained by
 	 * calling {@link AssertionError#getCause}.
 	 *
+	 * @param <T>            generic type of the expected exception
 	 * @param throwableClass the expected type of the exception
 	 * @param runnable       A function that is expected to throw an
 	 *                       exception when invoked
